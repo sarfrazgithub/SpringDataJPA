@@ -32,4 +32,12 @@ public class Recipe {
     private Set<Ingredient> ingredients;
     @OneToOne( cascade = CascadeType.ALL)
     private Notes notes;
+
+    @Enumerated( EnumType.STRING)
+    private Difficulty difficulty;
+
+    @ManyToMany
+    @JoinTable(name = "recipe_category", joinColumns = @JoinColumn(name="recipes_id"))
+    private Set<Category> category;
+
 }
