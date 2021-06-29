@@ -13,6 +13,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @Entity
+@Table(name = "RECIPE")
 public class Recipe {
 
     @Id
